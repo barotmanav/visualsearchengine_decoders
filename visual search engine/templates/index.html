@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visual Search Engine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Visual Search Engine</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+            <h3>Search by Text</h3>
+            <input type="text" name="query" placeholder="Enter a search term">
+            <input type="submit" value="Search Text">
+        </form>
+
+        <form method="POST" enctype="multipart/form-data">
+            <h3>Search by Image</h3>
+            <input type="file" name="image">
+            <input type="submit" value="Search Image">
+        </form>
+
+        {% if results %}
+        <h2>Results:</h2>
+        <ul>
+            {% for result in results %}
+            <li><img src="{{ url_for('static', filename='images/' + result) }}" width="200" onerror="this.style.display='none'"></li>
+          {% endfor %}
+          
+        
+        </ul>
+      {% endif %}
+      
+    </div>
+</body>
+</html>

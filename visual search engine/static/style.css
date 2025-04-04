@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.container {
+  margin: 40px auto;
+  width: 70%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+input[type="text"], input[type="file"] {
+  padding: 10px;
+  margin: 10px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #2f8de4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.results {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
