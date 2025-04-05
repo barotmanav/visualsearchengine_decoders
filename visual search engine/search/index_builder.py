@@ -7,7 +7,7 @@ from model.clip_model import get_image_embedding
 
 
 
-def build_index(image_folder="images"):
+def build_index(image_folder="static/images"):
     image_files = [f for f in os.listdir(image_folder) if f.endswith(('jpg', 'png'))]
     index = faiss.IndexFlatL2(512)
     image_paths = []
